@@ -1,0 +1,19 @@
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ <!-- 
+  constructor Injection
+  <bean id ="hello" class="com.sam.HelloWorld.HelloWorld">
+ <constructor-arg>
+  <value>Welcome To Spring Demo</value>
+  </constructor-arg>
+   
+  </bean>
+-->
+<!-- Property Injection -->
+ <bean id="hello" class="com.sam.HelloWorld.HelloWorld">
+ <property name="name" value="Welcome To spring"/>
+ </bean>
+
+</beans>
