@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+<bean id="emp_dao" class="com.sam.DAO.EmployeeDAOImp">
+<property name="DataSource" ref="ds"></property>
+</bean>
+<bean id="emp_service" class="com.sam.EmployeeServiceImplementaion">
+<property name="EmployeeDAO" ref="emp_dao" />
+</bean>
+
+<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+    <property name="url" value="jdbc:mysql://localhost:3306/yadavas9800" />
+    <property name="username" value="root" />
+    <property name="password" value="admin" />
+</bean>
+
+</beans>
